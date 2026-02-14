@@ -1,0 +1,45 @@
+package wala_lang;
+import java.io.*;
+import java.util.Scanner;
+public class Calculator {
+
+	public static void main(String[] args) {
+		Scanner calcu = new Scanner(System.in);
+		
+		System.out.println("---Basic Calculator---");
+		System.out.println("1. Addition");
+		System.out.println("2. Subtraction");
+		System.out.println("3. Multiplication");
+		System.out.println("4. Division");
+		
+		// input a number
+		System.out.print("Enter First Number: ");
+		double num1 = calcu.nextDouble();
+		System.out.print("Enter Second Number: ");
+		double num2 = calcu.nextDouble();
+		
+		System.out.print("Choose Operation (1-4): ");
+		int operation = calcu.nextInt();
+		
+		//result of calculations
+		if (operation == 1) {
+			double result = num1 + num2;
+			System.out.print(num1 + "+" + num2 + "=" + result);
+			
+		} else if (operation == 2) {
+			double result = num1 - num2;
+			System.out.print(num1 + "-" + num2 + "=" + result);
+		
+		} else if (operation == 3) {
+			double result = num1 * num2;
+			System.out.print(num1 + "x" + num2 + "=" + result);
+		
+		} else if (operation == 4) {
+			double result = num1 / num2;
+			System.out.print(num1 + "/" + num2 + "=" + result);
+		} else {
+			System.out.println("Can't divide by zero");
+			System.out.println("Try again. Choose operation 1-4");
+	} 
+	}
+}
